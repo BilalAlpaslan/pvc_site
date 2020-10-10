@@ -1,0 +1,34 @@
+<div class="slideshow-container">
+    <div class="mySlides fade">
+      <div class="numbertext">1 / 3</div>
+      <img src="http://www.w3schools.com/howto/img_nature_wide.jpg" style="width:100%">
+      <div class="text">Sldier 1 Yazı Alanı</div>
+    </div>
+    <div class="mySlides fade">
+      <div class="numbertext">2 / 3</div>
+      <img src="http://www.w3schools.com/howto/img_fjords_wide.jpg" style="width:100%">
+      <div class="text">Sldier 2 Yazı Alanı</div>
+    </div>
+    <div class="mySlides fade">
+      <div class="numbertext">3 / 3</div>
+      <img src="http://www.w3schools.com/howto/img_mountains_wide.jpg" style="width:100%">
+      <div class="text">Sldier 3 Yazı Alanı</div>
+  </div>
+  
+  
+  <script>
+  var slideIndex = 0;
+  showSlides();
+  function showSlides() {
+      var i;
+      var slides = document.getElementsByClassName("mySlides");
+      for (i = 0; i < slides.length; i++) {
+         slides[i].style.display = "none";  
+      }slideIndex++;
+  
+      if (slideIndex> slides.length) {slideIndex = 1} 
+  
+      slides[slideIndex-1].style.display = "block";  
+      setTimeout(showSlides, 2000); // süre
+  }
+  </script>

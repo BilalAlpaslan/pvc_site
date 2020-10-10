@@ -1,0 +1,98 @@
+{% extends 'layout.html' %}
+{% load static %}
+{% block content %}
+<!--==========================
+Page Banner Section
+============================-->
+<section id="innerBanner"> 
+<div class="inner-content">
+    <h2><span>Hakkımızda</span><br></h2>
+    <div> 
+    </div>
+</div> 
+</section><!-- #Page Banner -->
+<!--==========================
+    About Section
+============================-->
+<section id="about" class="wow fadeInUp">
+    <div class="container"> 
+        <div class="row">
+        <div class="col-lg-6 about-img">
+            <img src="{% static 'img/about-img.png' %}" alt="">
+        </div>
+
+        <div class="col-lg-6 content">
+            <h2>{{ hakkında.baslık }}</h2>
+            <p> {{ hakkında.icerik | safe}} </p>
+        </div>
+        </div>
+
+    </div>
+    </section><!-- #about -->
+
+    {% include 'partials/_client.html' %} 
+
+    {% include 'partials/_contactUs.html' %} 
+
+    <!--==========================
+    Testimonials Section
+    ============================-->
+
+    <!-- <section id="testimonials" class="wow fadeInUp">
+    <div class="container">
+        <div class="section-header">
+        <h2>Testimonials</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores quae porro consequatur aliquam, incidunt fugiat culpa esse aute nulla. duis fugiat culpa esse aute nulla ipsum velit export irure minim illum fore</p>
+        </div>
+        <div class="owl-carousel testimonials-carousel">
+
+            <div class="testimonial-item">
+            <p>Dolores quae porro consequatur aliquam, incidunt fugiat culpa esse aute nulla. duis fugiat culpa esse aute nulla ipsum velit export irure minim illum fore
+                
+            </p> 
+            <h3>Mrio James</h3>
+            <h4>CEO &amp; Founder</h4>
+            </div>
+
+            <div class="testimonial-item">
+            <p>
+                Dolores quae porro consequatur aliquam, incidunt fugiat culpa esse aute nulla. duis fugiat culpa esse aute nulla ipsum velit export irure minim illum fore
+                
+            </p> 
+            <h3>Finton Gofnes</h3>
+            <h4>CTO</h4>
+            </div>
+
+            <div class="testimonial-item">
+            <p>
+                Dolores quae porro consequatur aliquam, incidunt fugiat culpa esse aute nulla. duis fugiat culpa esse aute nulla ipsum velit export irure minim illum fore
+                
+            </p> 
+            <h3>Marcus Kell</h3>
+            <h4>Marketing</h4>
+            </div>
+
+            <div class="testimonial-item">
+            <p>
+                Dolores quae porro consequatur aliquam, incidunt fugiat culpa esse aute nulla. duis fugiat culpa esse aute nulla ipsum velit export irure minim illum fore
+                
+            </p> 
+            <h3>Williams Belly</h3>
+            <h4>Accounts</h4>
+            </div>
+
+            <div class="testimonial-item">
+            <p>
+                Dolores quae porro consequatur aliquam, incidunt fugiat culpa esse aute nulla. duis fugiat culpa esse aute nulla ipsum velit export irure minim illum fore
+                
+            </p> 
+            <h3>Larry Hanson</h3>
+            <h4>Investor</h4>
+            </div>
+
+        </div>
+
+    </div>
+    </section>
+    #testimonials -->
+{% endblock %}

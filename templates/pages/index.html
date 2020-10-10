@@ -1,0 +1,151 @@
+{% extends 'layout.html' %}
+{% load static %}
+{% load humanize %}
+
+
+{% block content %}
+<!--==========================
+  Intro Section
+============================-->
+<section id="intro">
+
+  <div class="intro-content">
+    <h2 style="color: black;"><span style="color: white;background-color:  #00b1e4;">HS</span><span style="color: black;">alüminyum</span><br>Alüminyum Profil</h2>
+  </div> 
+</section><!-- #intro -->
+
+
+<!--==========================
+  About Section
+============================-->
+<section id="about" class="wow fadeInUp">
+  <div class="container">
+  <div class="section-header">
+      <h2>Hoşgeldiniz</h2>
+      <p>örnek boş paragraf.....</p>
+    </div>
+    <div class="row">
+      <div class="col-lg-6 about-img">
+        <img src="{% static 'img/about.jpg' %} " alt="">
+      </div>
+
+      <div class="col-lg-6 content">
+        <h2>h2 boyutlu yazı</h2>
+        <h3>h3 boyutlu başka bir yazı</h3>
+        <p>örnek bir paragtaf .örnek bir paragtaf .örnek bir paragtaf .örnek bir paragtaf .örnek bir paragtaf 
+          örnek bir paragtaf örnek bir paragtaf örnek bir paragtaf örnek bir paragtaf 
+        </p>
+      </div>
+    </div>
+
+  </div>
+</section><!-- #about -->
+
+<!--==========================
+  Services Section
+============================-->
+<section id="services">
+  <div class="container">
+    <div class="section-header">
+      <h2>Hizmetlerimiz</h2>
+      <p>hizmetlerimiz paragrafı örnek</p>
+    </div>
+
+    <div class="row">
+
+      <div class="col-lg-4">
+        <div class="box wow fadeInLeft">
+          <div class="icon svgImg"><img src="{% static 'img/g1.jpg' %}" alt=""></div>
+          <h4 class="title"><a href="">Başlık 1</a></h4>
+          <p class="description">örnek bir paragraf.... örneek</p>
+        </div>
+      </div>
+
+      <div class="col-lg-4">
+        <div class="box wow fadeInRight">
+            <div class="icon svgImg"><img src="{% static 'img/g2.jpg' %}" alt=""></div>
+          <h4 class="title"><a href="">Başlık 2</a></h4>
+          <p class="description">örnek bir paragraf.... örneek</p>
+        </div>
+      </div>
+
+      <div class="col-lg-4">
+        <div class="box wow fadeInLeft" data-wow-delay="0.2s">
+            <div class="icon svgImg"><img src="{% static 'img/g3.jpg' %}" alt=""></div>
+          <h4 class="title"><a href="">Başlık 3</a></h4>
+          <p class="description">örnek bir paragraf.... örneek</p>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section><!-- #services -->
+
+{% include 'partials/_client.html' %} 
+
+
+<!--==========================
+  Testimonials Section
+============================-->
+<!-- <section id="testimonials" class="wow fadeInUp">
+  <div class="container">
+    <div class="section-header">
+      <h2>Testimonials</h2>
+      <p>örnek bir paragraf.... örneek. duis fugiat culpa esse aute nulla ipsum velit export irure minim illum fore</p>
+    </div>
+    <div class="owl-carousel testimonials-carousel">
+
+        <div class="testimonial-item">
+          <p>Dolores quae porro consequatur aliquam, incidunt fugiat culpa esse aute nulla. duis fugiat culpa esse aute nulla ipsum velit export irure minim illum fore
+            
+          </p> 
+          <h3>Mrio James</h3>
+          <h4>CEO &amp; Founder</h4>
+        </div>
+
+        <div class="testimonial-item">
+          <p>
+            Dolores quae porro consequatur aliquam, incidunt fugiat culpa esse aute nulla. duis fugiat culpa esse aute nulla ipsum velit export irure minim illum fore
+            
+          </p> 
+          <h3>Finton Gofnes</h3>
+          <h4>CTO</h4>
+        </div>
+
+        <div class="testimonial-item">
+          <p>
+            Dolores quae porro consequatur aliquam, incidunt fugiat culpa esse aute nulla. duis fugiat culpa esse aute nulla ipsum velit export irure minim illum fore
+            
+          </p> 
+          <h3>Marcus Kell</h3>
+          <h4>Marketing</h4>
+        </div>
+
+        <div class="testimonial-item">
+          <p>
+            Dolores quae porro consequatur aliquam, incidunt fugiat culpa esse aute nulla. duis fugiat culpa esse aute nulla ipsum velit export irure minim illum fore
+            
+          </p> 
+          <h3>Williams Belly</h3>
+          <h4>Accounts</h4>
+        </div>
+
+        <div class="testimonial-item">
+          <p>
+            Dolores quae porro consequatur aliquam, incidunt fugiat culpa esse aute nulla. duis fugiat culpa esse aute nulla ipsum velit export irure minim illum fore
+            
+          </p> 
+          <h3>Larry Hanson</h3>
+          <h4>Investor</h4>
+        </div>
+
+    </div>
+
+  </div>
+</section> -->
+<!-- #testimonials -->
+
+{% include 'partials/_contactUs.html' %} 
+
+{% endblock %}

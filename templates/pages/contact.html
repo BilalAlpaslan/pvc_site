@@ -1,0 +1,97 @@
+{% extends 'layout.html' %}
+{% load static %}
+{% load humanize %}
+
+
+{% block content %}
+<!--==========================
+Page Banner Section
+============================-->
+<section id="innerBanner"> 
+<div class="inner-content">
+    <h2><span>İletişim</span><br></h2>
+    <div> 
+    </div>
+</div> 
+</section><!-- #Page Banner -->
+
+<!--==========================
+    Contact Section
+============================-->
+<section id="contact" class="wow fadeInUp">
+    <div class="container">
+        <div class="section-header"> 
+        <p>İletişim bilgileri</p>
+        </div>
+
+        <div class="row contact-info">
+        <div class="col-lg-5"> 
+
+            <div class="contact-address">
+            <i class="ion-ios-location-outline"></i>
+            <h3>Adres</h3>
+            <p>{{ iletisim.adres }}</p>
+            </div> 
+
+            <div class="contact-phone">
+            <i class="ion-ios-telephone-outline"></i>
+            <h3>Tel no</h3>
+            <p>{{ iletisim.telefon }}</p>
+            </div> 
+
+            <div class="contact-email">
+            <i class="ion-ios-email-outline"></i>
+            <h3>Email</h3>
+            <p>{{ iletisim.mail }}</p>
+            </div> 
+
+        </div>
+            <!--<div class="col-lg-7">
+                <div class="container">
+            <div class="form"> 
+            
+                -------Form itself
+            <form name="sentMessage" class="well" id="contactForm"  novalidate> 
+            <div class="control-group">
+                        <div class="form-group">
+                <input type="text" class="form-control" 
+                        placeholder="Full Name" id="name" required
+                            data-validation-required-message="Please enter your name" />
+                <p class="help-block"></p>
+
+                </div>
+                </div> 	
+                    <div class="form-group">
+                    <div class="controls">
+                <input type="email" class="form-control" placeholder="Email" 
+                                    id="email" required
+                            data-validation-required-message="Please enter your email" />
+            </div>
+            </div> 	
+                
+                    <div class="form-group">
+                    <div class="controls">
+                    <textarea rows="10" cols="100" class="form-control" 
+                            placeholder="Message" id="message" required
+                    data-validation-required-message="Please enter your message" minlength="5" 
+                            data-validation-minlength-message="Min 5 characters" 
+                            maxlength="999" style="resize:none"></textarea>
+            </div>
+                    </div> 		 
+            <div id="success"> </div> -----For success/fail messages
+            <button type="submit" class="btn btn-primary pull-right">Send</button><br />
+            </form>
+            </div> 
+
+                </div>
+            </div>-->
+        </div>
+    </div>
+
+    <div class="container mb-4 map">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12047.86077285667!2d29.143448000000003!3d40.982243!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDDCsDU4JzU2LjEiTiAyOcKwMDgnMzYuNCJF!5e0!3m2!1str!2s!4v1396691350272" width="100%" height="350" frameborder="0" style="border:0" allowfullscreen></iframe> 
+    </div>
+
+    </section><!-- #contact -->
+{% endblock %}
+

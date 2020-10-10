@@ -1,0 +1,75 @@
+{% extends 'layout.html' %}
+{% load static %}
+{% load humanize %}
+
+
+{% block content %}
+<!--==========================
+    Page Banner Section
+  ============================-->
+  <section id="innerBanner"> 
+    <div class="inner-content">
+      <h2><span>{{ sistem.baslık }}</span><br></h2>
+      <div> 
+      </div>
+    </div> 
+  </section><!-- #Page Banner -->
+  
+  <!--==========================
+    Our Portfolio Section
+  ============================-->
+  <section id="portfolio" class="wow fadeInUp">
+
+    <div class="container-fluid">
+      <div class="row no-gutters">
+        <div class="container">
+          <div class="section-header">
+            <p>{{ sistem.icerik |safe }}</p>
+          </div>
+        </div>
+
+        {% if sistem.image1 %}
+        <div class="col-lg-4 col-md-4">
+          <div class="portfolio-item wow fadeInUp">
+            <a href="{{ sistem.image1.url }}" class="portfolio-popup">
+              <img src="{{ sistem.image1.url }}" alt="">
+              <div class="portfolio-overlay">
+                <div class="portfolio-info"><h2 class="wow fadeInUp">büyüt</h2></div>
+              </div>
+            </a>
+          </div>
+        </div>
+        {% endif %}
+        {% if sistem.image2 %}
+        <div class="col-lg-4 col-md-4">
+          <div class="portfolio-item wow fadeInUp">
+            <a href="{{ sistem.image2.url }}" class="portfolio-popup">
+              <img src="{{ sistem.image2.url }}" alt="">
+              <div class="portfolio-overlay">
+                <div class="portfolio-info"><h2 class="wow fadeInUp">büyüt</h2></div>
+              </div>
+            </a>
+          </div>
+        </div>
+        {% endif %}
+        {% if sistem.image3 %}
+        <div class="col-lg-4 col-md-4">
+          <div class="portfolio-item wow fadeInUp">
+            <a href="{{ sistem.image3.url }}" class="portfolio-popup">
+              <img src="{{ sistem.image3.url }}" alt="">
+              <div class="portfolio-overlay">
+                <div class="portfolio-info"><h2 class="wow fadeInUp">büyüt</h2></div>
+              </div>
+            </a>
+          </div>
+        </div>
+        {% endif %}
+          
+
+
+
+      </div>
+
+    </div>
+  </section><!-- #portfolio -->
+  {% endblock %}
