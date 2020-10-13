@@ -7,16 +7,15 @@
     <div class="container">
       <div class="section-header">
         <h2>Müşterilerimiz</h2>
-        <p>bir örnek paragraf</p>
       </div>
-  
       <div class="owl-carousel clients-carousel">
-        <img src="{% static 'img/clients/client-1.png' %}" alt="">
-        <img src="{% static 'img/clients/client-2.png' %}" alt="">
-        <img src="{% static 'img/clients/client-3.png' %}" alt="">
-        <img src="{% static 'img/clients/client-4.png' %}" alt="">
-        <img src="{% static 'img/clients/client-5.png' %}" alt="">
-        <img src="{% static 'img/clients/client-6.png' %}" alt="">
+        
+        {% for müsteri in müsteriler %}
+          
+          {% if müsteri.image %}
+            <img src="{{ müsteri.image.url }}" alt="">
+          {% endif %}
+        {% endfor %}
       </div>
   
     </div>

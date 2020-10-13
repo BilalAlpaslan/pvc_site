@@ -5,16 +5,17 @@
   <section id="topbar" class="d-none d-lg-block">
     <div class="container clearfix">
       <div class="contact-info float-left">
-        <i class="fa fa-envelope-o"></i> <a href="mailto:contact@example.com">mail</a>
-        <i class="fa fa-phone"></i> telefon
+        <i class="fa fa-envelope-o"></i> <a href="{{ iletisim.mail }}">{{ iletisim.mail }}</a>
+        <i class="fa fa-phone"></i> {{ iletisim.telefon }}
       </div>
-      <div class="social-links float-right">
+      
+      <!-- <div class="social-links float-right">
         <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
         <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
         <a href="#" class="google-plus"><i class="fa fa-google-plus"></i></a>
         <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
         <a href="#" class="instagram"><i class="fa fa-instagram"></i></a>
-      </div>
+      </div> -->
     </div>
   </section>
 
@@ -34,19 +35,11 @@
           <li {% if 'about' in request.path %} class="menu-active" {% endif %}><a href="{% url 'about' %}">Hakkımızda</a></li>
           <li {% if 'proje' in request.path %} class="menu-active" {% endif %}><a href="{% url 'proje' %}">Projeler</a></li>
           <li {% if 'catalog' in request.path %} class="menu-active" {% endif %}><a href="{% url 'catalog' %}">Katalog</a></li>
-          <li {% if 'Sistem' in request.path %} class="menu-active menu-has-children" {% endif %} class="menu-has-children"><a href="">Sistemler</a>
+          <li {% if 'Sistem' in request.path %} class="menu-active menu-has-children" {% endif %} class="menu-has-children"><a>Sistemler</a>
             <ul>
-              <li><a href="{% url 'sistem' sistem_url='otomatik-kepenk' %}">Otomatik Kepenk</a></li>
-              <li><a href="{% url 'sistem' sistem_url='ofis-bolme' %}">Ofis Bölme Sistemleri</a></li>
-              <li><a href="{% url 'sistem' sistem_url='spider-cam-korkuluk' %}">Spider Cam Korkuluk</a></li>
-              <li><a href="{% url 'sistem' sistem_url='aluminyum-korkuluk' %}">Aluminyum Korkuluk</a></li>
-              <li><a href="{% url 'sistem' sistem_url='aluminyum-dograma' %}">Aluminyum Dograma</a></li>
-              <li><a href="{% url 'sistem' sistem_url='aluminyum-kapi-kasasi' %}">Aluminyum Kapı Kasası</a></li>
-              <li><a href="{% url 'sistem' sistem_url='cam-balkon' %}">Cam Balkon</a></li>
-              <li><a href="{% url 'sistem' sistem_url='pvc-dograma' %}">Pvc Dograma</a></li>
-              <li><a href="{% url 'sistem' sistem_url='silikon-cephe' %}">Silikon Cephe Kaplama</a></li>
-              <li><a href="{% url 'sistem' sistem_url='yangin-merdiveni' %}">Yangın Merdiveni</a></li>
-              <li><a href="{% url 'sistem' sistem_url='alcipan-bolme' %}">Alcıpan Bölme</a></li>
+              {% for sistem in sistemler %}
+                <li><a href="{% url 'sistem' sistem_url=sistem.sistem_url %}">{{ sistem.baslık }}</a></li>
+              {% endfor %}
             </ul>
           </li>
           <li {% if 'contact' in request.path %} class="menu-active" {% endif %}><a href="{% url 'contact' %}">İletişim</a></li>

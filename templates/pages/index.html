@@ -20,21 +20,17 @@
 ============================-->
 <section id="about" class="wow fadeInUp">
   <div class="container">
-  <div class="section-header">
-      <h2>Hoşgeldiniz</h2>
-      <p>örnek boş paragraf.....</p>
+    <div class="section-header">
+      <h2>{{ anasayfa.anabaşlık }}</h2>
     </div>
     <div class="row">
-      <div class="col-lg-6 about-img">
-        <img src="{% static 'img/about.jpg' %} " alt="">
+      <div class="col-lg-6 about-img"> 
+        <img src="{{ anasayfa.image.url }} " alt="">
       </div>
 
       <div class="col-lg-6 content">
-        <h2>h2 boyutlu yazı</h2>
-        <h3>h3 boyutlu başka bir yazı</h3>
-        <p>örnek bir paragtaf .örnek bir paragtaf .örnek bir paragtaf .örnek bir paragtaf .örnek bir paragtaf 
-          örnek bir paragtaf örnek bir paragtaf örnek bir paragtaf örnek bir paragtaf 
-        </p>
+        <h2>{{ anasayfa.altbaşlık }}</h2>
+        <p> {{ anasayfa.paragraf | safe }} </p>
       </div>
     </div>
 
@@ -44,11 +40,10 @@
 <!--==========================
   Services Section
 ============================-->
-<section id="services">
+<!-- <section id="services">
   <div class="container">
     <div class="section-header">
       <h2>Hizmetlerimiz</h2>
-      <p>hizmetlerimiz paragrafı örnek</p>
     </div>
 
     <div class="row">
@@ -80,72 +75,10 @@
     </div>
 
   </div>
-</section><!-- #services -->
+</section> -->
+<!-- #services -->
 
 {% include 'partials/_client.html' %} 
-
-
-<!--==========================
-  Testimonials Section
-============================-->
-<!-- <section id="testimonials" class="wow fadeInUp">
-  <div class="container">
-    <div class="section-header">
-      <h2>Testimonials</h2>
-      <p>örnek bir paragraf.... örneek. duis fugiat culpa esse aute nulla ipsum velit export irure minim illum fore</p>
-    </div>
-    <div class="owl-carousel testimonials-carousel">
-
-        <div class="testimonial-item">
-          <p>Dolores quae porro consequatur aliquam, incidunt fugiat culpa esse aute nulla. duis fugiat culpa esse aute nulla ipsum velit export irure minim illum fore
-            
-          </p> 
-          <h3>Mrio James</h3>
-          <h4>CEO &amp; Founder</h4>
-        </div>
-
-        <div class="testimonial-item">
-          <p>
-            Dolores quae porro consequatur aliquam, incidunt fugiat culpa esse aute nulla. duis fugiat culpa esse aute nulla ipsum velit export irure minim illum fore
-            
-          </p> 
-          <h3>Finton Gofnes</h3>
-          <h4>CTO</h4>
-        </div>
-
-        <div class="testimonial-item">
-          <p>
-            Dolores quae porro consequatur aliquam, incidunt fugiat culpa esse aute nulla. duis fugiat culpa esse aute nulla ipsum velit export irure minim illum fore
-            
-          </p> 
-          <h3>Marcus Kell</h3>
-          <h4>Marketing</h4>
-        </div>
-
-        <div class="testimonial-item">
-          <p>
-            Dolores quae porro consequatur aliquam, incidunt fugiat culpa esse aute nulla. duis fugiat culpa esse aute nulla ipsum velit export irure minim illum fore
-            
-          </p> 
-          <h3>Williams Belly</h3>
-          <h4>Accounts</h4>
-        </div>
-
-        <div class="testimonial-item">
-          <p>
-            Dolores quae porro consequatur aliquam, incidunt fugiat culpa esse aute nulla. duis fugiat culpa esse aute nulla ipsum velit export irure minim illum fore
-            
-          </p> 
-          <h3>Larry Hanson</h3>
-          <h4>Investor</h4>
-        </div>
-
-    </div>
-
-  </div>
-</section> -->
-<!-- #testimonials -->
-
 {% include 'partials/_contactUs.html' %} 
 
 {% endblock %}

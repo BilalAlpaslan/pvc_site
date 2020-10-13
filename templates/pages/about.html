@@ -17,14 +17,24 @@ Page Banner Section
 <section id="about" class="wow fadeInUp">
     <div class="container"> 
         <div class="row">
-        <div class="col-lg-6 about-img">
-            <img src="{% static 'img/about-img.png' %}" alt="">
-        </div>
-
-        <div class="col-lg-6 content">
-            <h2>{{ hakkında.baslık }}</h2>
-            <p> {{ hakkında.icerik | safe}} </p>
-        </div>
+            <div class="col-lg-7 content">
+                <h2>{{ hakkında.baslık }}</h2>
+                <p> {{ hakkında.icerik | safe}} </p>
+            </div>
+            <div class="col-lg-1"></div>
+            <div class="col-lg-4 about-img">
+                {% if hakkında.image1 %}
+                    <img src="{{ hakkında.image1.url}}">
+                {% endif %}
+                <br><br><br><br><br><br><br><br>
+                {% if hakkında.image2 %}
+                    <img src="{{ hakkında.image2.url}}">
+                {% endif %}
+                <br><br><br><br><br><br><br><br>
+                {% if hakkında.image3 %}
+                    <img src="{{ hakkında.image3.url}}">
+                {% endif %}
+            </div>
         </div>
 
     </div>
